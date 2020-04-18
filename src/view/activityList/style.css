@@ -1,0 +1,12 @@
+.Container{
+  background-color: red;
+  color: white;
+  width: 400px;
+  height: 500px;
+  padding: 10px;
+}
+
+.mainContainer{
+    overflow-y: scroll;
+    max-height: 470px;
+}

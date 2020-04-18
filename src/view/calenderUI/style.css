@@ -1,0 +1,7 @@
+.textUI{
+  margin-top: 3vmin;
+  width: 30vmin;
+  background-color: rgb(77, 74, 74);
+  display: inline-block;
+  border-radius: 4px;
+}

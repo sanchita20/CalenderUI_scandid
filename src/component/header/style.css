@@ -1,0 +1,51 @@
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftHeaderUI{
+  display: flex;
+  flex-direction: row;
+}
+
+.name{
+  display: flex;
+  align-self: center;
+  margin: 0px;
+}
+
+.notificationUI{
+  display: flex;
+  float: right;
+}
+
+.notificationCount{
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: red;
+  display: flex;
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+  margin-left: 19px;
+  display: flex;
+}
+
+.count{
+  margin-left: 4.5px;
+    margin-top: -2px;
+    justify-content: center;
+    font-size: small;
+}
+.arrow{
+  transform: rotate(180deg);
+  align-self: center;
+}
+
+.accessTime{
+  align-self: center;
+}

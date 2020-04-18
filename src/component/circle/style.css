@@ -1,0 +1,25 @@
+.mainCircle{
+  margin-top: 4vmin;
+  display: inline-block;
+  height: 34vmin;
+  width: 34vmin;
+}
+
+.timerClockOuterCircle{
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 4vmin;
+  background-color: red;
+  display: flex;
+}
+
+.checkbox{
+  margin-bottom: -10vmin;
+  margin-top: 3vmin;
+}
+
+.iconCounterColor{
+  color: white;
+  margin:auto;
+  display: flex;
+}

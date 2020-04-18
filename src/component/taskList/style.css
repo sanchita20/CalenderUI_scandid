@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h6{
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px
+}
+
+.taskTitle{
+    flex-direction: row;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listFirstDiv{
+    flex-direction: row;
+    display: flex;
+     align-items: center;
+}
+
+.downArrowDiv{
+    float: 'right';
+    display: 'flex';
+}
+
+.downArrow{
+  transform: rotate(90deg);
+  align-self: center;
+}

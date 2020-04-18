@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vmin;
+  /* background-color: blue; */
+  background-image: linear-gradient(to right, #2874a6 , #aed6f1);
 }
 
 .App-logo {
@@ -35,4 +41,79 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Container{
+  background-color: black;
+  color: white;
+  width: 400px;
+  height: 500px;
+  padding: 10px;
+}
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftHeaderUI{
+  display: flex;
+  flex-direction: row;
+}
+
+.name{
+  display: flex;
+  align-self: center;
+  margin: 0px;
+}
+
+.notificationUI{
+  display: flex;
+  float: right;
+}
+
+.notificationCount{
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: red;
+  display: flex;
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+  margin-left: 19px;
+  display: flex;
+}
+
+.count{
+  margin-left: 4.5px;
+    margin-top: -2px;
+    justify-content: center;
+    font-size: small;
+}
+
+.textUI{
+  margin-top: 3vmin;
+  width: 50vmin;
+  background-color: rgb(77, 74, 74);
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.iconColor{
+  color: white;
+}
+
+.timeUI{
+  margin-top: 4vmin;
+  width: 50vmin;
+  background-color: rgb(77, 74, 74);
+  display: inline-block;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: 'absolute';
+  bottom:0
 }
