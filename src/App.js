@@ -42,13 +42,15 @@ class App extends React.Component {
 
   onNotificationClick = () => {
     this.setState(prevState => ({
-      viewActivity: !prevState.viewActivity
+      viewActivity: !prevState.viewActivity,
+      viewCalender: false
     }))
   }
 
   onTimeClick = () => {
     this.setState(prevState => ({
-      viewCalender: !prevState.viewCalender
+      viewCalender: !prevState.viewCalender,
+      viewActivity: false,
     }))
   }
 

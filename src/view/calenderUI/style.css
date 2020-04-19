@@ -1,7 +1,49 @@
 .textUI{
   margin-top: 3vmin;
-  width: 30vmin;
-  background-color: rgb(77, 74, 74);
+  width: 5vmin;
+  background-color: red;
   display: inline-block;
+  border-radius: 4px;
+}
+
+.Container{
+  color: white;
+  width: 250px;
+  height: 500px;
+  position: relative;
+}
+
+.topDiv{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomDiv{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-top:400px;
+}
+
+.calendarIconDiv{
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  float: right;
+  border-radius: 4px;
+}
+
+.cancelIconDiv{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  float: right;
   border-radius: 4px;
 }
