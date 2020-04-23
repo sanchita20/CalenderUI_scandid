@@ -76,7 +76,7 @@ class App extends React.Component {
                 }}
               />
             </div>
-            <Circle />
+            <Circle viewInsideCircle={viewActivity ? true : false} />
             <div class="timeUI">
               <Input
                 id="standard-adornment-password"
@@ -104,11 +104,13 @@ class App extends React.Component {
           </div>
           {
             viewActivity &&
-            <div style={{ position: 'absolute', zIndex: 1, marginLeft: '410px', height: '550px' }}><ActivityList /></div>
+            <div style={{ position: 'absolute', zIndex: 1, marginLeft: '105vmin', height: '550px' }}><ActivityList /></div>
           }
           {
             viewCalender &&
-            <div style={{ position: 'absolute', zIndex: 1, marginLeft: '410px', height: '550px' }}><CalenderUI /></div>
+            <div style={{ position: 'absolute', zIndex: 1, marginLeft: '105vmin', height: '550px' }}>
+              <CalenderUI callBack={() => { this.setState({ viewCalender: false }) }} />
+            </div>
           }
         </div>
       </>

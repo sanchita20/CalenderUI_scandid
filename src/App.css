@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-direction: row;
   height: 100vmin;
+  width:100%;
   background-image: linear-gradient(to right, #2874a6 , #aed6f1);
 }
 
@@ -45,8 +47,8 @@
 .Container{
   background-color: black;
   color: white;
-  width: 400px;
-  height: 500px;
+  width: 50vmin;
+  /* height: 80vmin; */
   padding: 10px;
 }
 

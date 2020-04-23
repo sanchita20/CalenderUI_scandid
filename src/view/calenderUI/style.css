@@ -23,7 +23,7 @@
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  margin-top:400px;
+  margin-top:40px;
 }
 
 .calendarIconDiv{
@@ -46,4 +46,14 @@
   width: 45px;
   float: right;
   border-radius: 4px;
+}
+
+.dateRangeIcon{
+  align-self: center;
+}
+
+.setDate{
+  background-color: 'green';
+  width: '300px';
+  color: 'white'
 }

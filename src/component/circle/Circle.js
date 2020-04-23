@@ -33,19 +33,22 @@ function Circle(props) {
                 styles={buildStyles({
                     pathColor: 'red'
                 })}
-                value={60}
+                value={props.viewInsideCircle ? 50 : 0}
                 strokeWidth={1.5}
             // text={'00:00'}
             >
                 <div style={{ marginTop: '-70px' }}>
-                    <h1>00:00</h1>
+                    <h1>{props.viewInsideCircle ? '00:50' : '00:00'}</h1>
                 </div>
                 <div class="timerClockOuterCircle">
                     <AccessTimeIcon className="iconCounterColor" fontSize="large" />
                 </div>
-                <div class="checkbox">
-                    <CheckBoxIcon fontSize="large" style={{ color: 'green' }} />
-                </div>
+                {
+                    props.viewInsideCircle &&
+                    <div class="checkbox">
+                        <CheckBoxIcon fontSize="large" style={{ color: 'green' }} />
+                    </div>
+                }
             </CircularProgressbarWithChildren >
         </div>
 

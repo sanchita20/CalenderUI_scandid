@@ -5,6 +5,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import { withStyles } from "@material-ui/core/styles";
+import Calendar from "../../component/calendar/Calendar";
 import moment from 'moment'
 import './style.css';
 
@@ -16,6 +17,16 @@ const styles = {
         color: 'white',
     },
     formLabelFocused: {
+    },
+    textView: {
+        float: 'left',
+        backgroundColor: '#282c34',
+        borderRadius: '4px',
+        width: '300px'
+    },
+    calendarStyle: {
+        position: 'relative',
+        margin: '20px auto'
     }
 };
 
@@ -29,15 +40,15 @@ class CalenderUI extends React.Component {
         }
     }
 
-    onNotificationClick = () => {
-        alert('onNotificationClick')
-    }
-
     timeChange = (event) => {
         const { value } = event.target;
         if (Number(value) && value.length <= 5) {
             this.setState({ time: moment(value, 'HH').format('HH:mm') })
         } else alert('Please enter number in given format')
+    }
+
+    onDayClick = (e, day) => {
+        console.log(day);
     }
 
     render() {
@@ -47,14 +58,13 @@ class CalenderUI extends React.Component {
             <div className="Container">
                 <div className="topDiv">
                     <TextField
-                        style={{ float: 'left', backgroundColor: '#282c34', borderRadius: '4px' }}
+                        className={classes.textView}
                         id="filled-secondary"
                         label={time === '' && "00:00"}
                         size="small"
                         value={time}
                         type="text"
                         maxLength={4}
-                        // color="secondary"
                         variant="filled"
                         onChange={this.timeChange}
                         InputLabelProps={{
@@ -65,23 +75,30 @@ class CalenderUI extends React.Component {
                         }}
                     />
                     <div className="calendarIconDiv">
-                        <DateRangeIcon fontSize="large" style={{ alignSelf: 'center' }} />
+                        <DateRangeIcon fontSize="large" className='dateRangeIcon' />
                     </div>
                 </div>
+                <div style={{ backgroundColor: '#282c34' }}>
+                    <Calendar style={{ position: 'relative', margin: '20px auto' }} width='302px' showYear={true} />
+                </div>
+                <div style={{ backgroundColor: '#282c34' }}>
+                    <Calendar
+                        style={{ position: 'relative', margin: '20px auto' }}
+                        width='302px'
+                        showMonthDate={true}
+                        onDayClick={(e, day) => this.onDayClick(e, day)} />
+                </div>
+
                 <div className="bottomDiv">
-                    <Button variant="contained" size="large" style={{ backgroundColor: 'green', width: '200px', color: 'white' }}>
+                    <Button variant="contained" size="large" style={{ backgroundColor: 'green', width: '300px', color: 'white' }}>
                         Set Date
                     </Button>
-                    <div className="cancelIconDiv">
-                        <CloseIcon fontSize="large" style={{ alignSelf: 'center', float: 'right', backgroundColor: 'red' }} />
+                    <div className="cancelIconDiv" onClick={() => this.props.callBack()}>
+                        <CloseIcon
+                            fontSize="large"
+                            style={{ alignSelf: 'center', float: 'right', backgroundColor: 'red', cursor: 'pointer' }} />
                     </div>
                 </div>
-                {/* <div style={{ position: "absolute", bottom: 20, alignSelf: 'center', display: 'flex', padding: '10px', paddingBottom: '20px', justifyContent: 'space-between' }}>
-                    <Button variant="contained" size="large" style={{ backgroundColor: 'green', width: '200px', color: 'white' }}>
-                        Set Date
-                    </Button>
-                    <CloseIcon style={{ alignSelf: 'center', backgroundColor: 'red', padding: '10px', borderRadius: '4px', float: 'right', display: 'flex' }} />
-                </div> */}
             </div>
         );
     }
